@@ -10,4 +10,24 @@
 
 // Your CSS partials
 @import "components/index";
+@import "components/banner";
 @import "pages/index";
+@import "components/card";
+
+body {
+  background-color: #333333;
+  color: white;
+}
+
+.flexbox {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cocktail-image {
+  width: 40vw;
+}
+
+#show-container {
+  justify-items: center;
+}

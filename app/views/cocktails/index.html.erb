@@ -1,0 +1,25 @@
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.unsplash.com/photo-1470337458703-46ad1756a187?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2849&q=80);">
+  <div class="container">
+    <h1>Mr. Cocktail</h1>
+    <p>Unwind from the day with a delicious and refreshing cocktail!</p>
+  </div>
+</div>
+
+<!-- Body Container -->
+<div class="container mt-3">
+  <!-- Grid Template -->
+  <div class="row">
+    <!-- Grid Body -->
+    <div class="col-sm-4 col-md-8 col-lg-8 col-xl-12">
+      <% @cocktails.each do |cocktail| %>
+        <!-- Cards -->
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cocktail.img_url %>)">
+          <%= link_to cocktail.name, cocktail_path(cocktail) %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+
