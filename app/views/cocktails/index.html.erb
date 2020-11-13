@@ -10,16 +10,27 @@
   <!-- Grid Template -->
   <div class="row">
     <!-- Grid Body -->
-    <div class="col-sm-4 col-md-8 col-lg-8 col-xl-12">
-      <% @cocktails.each do |cocktail| %>
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-sm-12 col-md-6 col-lg-4 col-xl-3" id="grid-col">
         <!-- Cards -->
-        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cocktail.img_url %>)">
-          <%= link_to cocktail.name, root_path(cocktail) %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path cocktail.photo.key, height: 300, width: 400, crop: :fill %>')">
+          <%= link_to cocktail.name, cocktail_path(cocktail) %>
         </div>
-      <% end %>
-    </div>
+      </div>
+    <% end %>
   </div>
 </div>
-
+<div class="footer">
+  <div class="footer-links">
+    <a href="#"><i class="fab fa-github"></i></a>
+    <a href="#"><i class="fab fa-instagram"></i></a>
+    <a href="#"><i class="fab fa-facebook"></i></a>
+    <a href="#"><i class="fab fa-twitter"></i></a>
+    <a href="#"><i class="fab fa-linkedin"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This app was programmed half-assedly by Paul Brar
+  </div>
+</div>
 
 

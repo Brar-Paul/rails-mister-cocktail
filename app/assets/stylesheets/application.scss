@@ -13,15 +13,11 @@
 @import "components/banner";
 @import "pages/index";
 @import "components/card";
+@import "components/footer";
 
 body {
   background-color: #333333;
   color: white;
-}
-
-.flexbox {
-  display: flex;
-  justify-content: space-evenly;
 }
 
 .cocktail-image {
@@ -30,4 +26,23 @@ body {
 
 #show-container {
   justify-items: center;
+}
+
+.cocktail-info {
+  margin: 30px 0px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.cocktail-title {
+  text-align: center;
+}
+
+.container-ingredients {
+  display: block;
+  width: 40vw;
+}
+
+.reviews {
+  display: flex;
 }
